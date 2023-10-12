@@ -1,0 +1,16 @@
+{
+  "name": "ai-universe-hub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/tailwind.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "daisyui": "^3.9.2",
+    "tailwindcss": "^3.3.3"
+  }
+}

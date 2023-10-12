@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Universe</title>
+    <!-- css  -->
+    <link rel="stylesheet" href="dist/tailwind.css" />
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="font-work">
+    <!-- header starts  -->
+    <header class="container mx-auto">
+      <h1 class="text-5xl text-black font-semibold text-center py-8">
+        AI Universe Hub
+      </h1>
+    </header>
+    <!-- header ends  -->
+
+    <!-- main starts  -->
+    <main class="container mx-auto">
+      <!-- sorting  -->
+      <div class="text-center">
+        <button id="sort-card" class="btn btn-error text-white my-4">
+          Sort by date
+        </button>
+      </div>
+      <!-- card container  -->
+      <div
+        id="card-container"
+        class="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5 gap-5"
+      >
+        <!-- <div class="card p-5 shadow-xl">
+          <figure class="rounded-lg">
+            <img
+              class="aspect-video"
+              src="https://images.unsplash.com/photo-1684795710872-64f77897feed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="AI"
+            />
+          </figure>
+          <div class="card-body p-0 mt-4">
+            <h2 class="card-title text-black">Features</h2>
+            <ol>
+              <li>Natural language processing</li>
+              <li>Contextual understanding</li>
+              <li>Text generation</li>
+            </ol>
+            <hr class="my-3" />
+            <div class="flex justify-between items-center">
+              <div>
+                <h4 class="text-2xl text-black font-semibold pb-3">Chat GPT</h4>
+                <p>
+                  <i class="fa-regular fa-calendar-days pr-2"></i>
+                  <span class="text-lg">11/12/2023</span>
+                </p>
+              </div>
+              <div>
+                <button class="btn bg-transparent border-0 btn-circle">
+                  <i class="fa-solid fa-xl fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- modal -->
+      <dialog id="show_modal" class="modal modal-bottom sm:modal-middle">
+        <div
+          id="modal-container"
+          class="modal-box bg-white flex gap-5 !max-w-screen-lg p-8 lg:p-16 text-black"
+        >
+          <!-- <div
+            class="basis-1/2 flex flex-col bg-[rgba(235, 87, 87, 0.05)] justify-between border-2 border-red-200 rounded-2xl p-6"
+          >
+            <h3 class="text-xl font-semibold">
+              ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT
+              technology to simulate human conversation.
+            </h3>
+            <div class="flex justify-between">
+              <div
+                class="p-3 grid justify-center items-center text-center text-green-400 font-bold"
+              >
+                <p>$10/month</p>
+                <p>Basic</p>
+              </div>
+              <div
+                class="p-3 grid justify-center items-center text-center text-yellow-400 font-bold"
+              >
+                <p>$10/month</p>
+                <p>Basic</p>
+              </div>
+              <div
+                class="p-3 grid justify-center items-center text-center text-red-400 font-bold"
+              >
+                <p>$10/month</p>
+                <p>Basic</p>
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div>
+                <header class="text-xl font-semibold pb-2">Features</header>
+                <ul class="list-disc pl-6">
+                  <li>Customizable responses</li>
+                  <li>Multilingual support</li>
+                  <li>Seamless integration</li>
+                </ul>
+              </div>
+              <div>
+                <header class="text-xl font-semibold pb-2">Integrations</header>
+                <ul class="list-disc pl-6">
+                  <li>Customizable responses</li>
+                  <li>Multilingual support</li>
+                  <li>Seamless integration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-gray-100 shadow-xl basis-1/2">
+            <figure class="aspect-video p-4">
+              <img
+                class="rounded-lg"
+                src="https://www.datanami.com/wp-content/uploads/2023/01/chat_gpt_shutterstock_Ebru-Omer.jpg"
+                alt="tools"
+              />
+              <p
+                class="absolute text-white bg-red-400 px-2 rounded-md top-4 right-6"
+              >
+                94% accuracy
+              </p>
+            </figure>
+            <div class="card-body px-4 py-8 text-center">
+              <h2 class="card-title text-xl justify-center">
+                Hi, how are you doing today?
+              </h2>
+              <p>
+                I'm doing well, thank you for asking. How can I assist you
+                today?
+              </p>
+            </div>
+          </div>
+          close btn 
+          <div class="modal-action absolute -top-3 right-3">
+            <form method="dialog">
+              <button class="btn btn-circle btn-outline bg-error text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div> -->
+        </div>
+      </dialog>
+
+      <!-- see more  -->
+      <div id="show-more" class="text-center">
+        <button
+          onclick="handleShowMore()"
+          class="btn btn-accent text-white my-4"
+        >
+          See More
+        </button>
+      </div>
+    </main>
+    <!-- main ends -->
+
+    <!-- scripts  -->
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
